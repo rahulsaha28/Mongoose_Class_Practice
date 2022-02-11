@@ -6,7 +6,7 @@ const router = require('express').Router();
 router.get('/all', async(req, res)=>{
     try {
 
-        const users = await Users.where('role').all(["Admin"])
+        const users = await Users.find()
 
         res.status(200).json({
             status:"Success",
