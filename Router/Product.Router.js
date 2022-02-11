@@ -1,8 +1,23 @@
 const { Products } = require('../Model/Product.Model');
 const router = require('express').Router();
 
-router.get('/', (req, res)=>{
+router.get('/all', async(req, res)=>{
 
+    try {
+
+        const products = await Products.where('qty').all([{"color":"black", "size":"L", "num":20}])
+        res.status(200).json({
+            code:res.statusCode,
+            status:"Success",
+            data:products
+        })
+    } catch (err) {
+        res.status(404).json({
+            code:res.statusCode,
+            status:"Error",
+            data:err
+        })
+    }
 });
 
 router.post('/', async(req, res)=>{

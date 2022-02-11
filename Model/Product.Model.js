@@ -13,6 +13,9 @@ const productSchema = mongoose.Schema({
     stoke:{
         type:Number,
         required:true
+    },
+    qty:{
+        type:Array
     }
 })
 
