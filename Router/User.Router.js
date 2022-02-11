@@ -3,10 +3,10 @@ const { Users } = require('../Model/User.Model');
 const router = require('express').Router();
 
 
-router.get('/all', async(req, res)=>{
+router.get('/or', async(req, res)=>{
     try {
 
-        const users = await Users.find()
+        const users = await Users.find({}).or([{name:"nakib"}, {email:"suzon-1@gmail.com"}])
 
         res.status(200).json({
             status:"Success",
