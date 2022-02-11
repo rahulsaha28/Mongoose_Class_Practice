@@ -53,5 +53,5 @@
 
 [Operator in mongodb](https://docs.mongodb.com/manual/reference/operator/aggregation/)
 
-[all](https://docs.mongodb.com/manual/reference/operator/query/all/)
+[and](https://docs.mongodb.com/manual/reference/operator/query/and/)
 
