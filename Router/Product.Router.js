@@ -1,11 +1,11 @@
 const { Products } = require('../Model/Product.Model');
 const router = require('express').Router();
 
-router.get('/all', async(req, res)=>{
+router.get('/and', async(req, res)=>{
 
     try {
 
-        const products = await Products.where('qty').all([{"color":"black", "size":"L", "num":20}])
+        const products = await Products.where('qty').and([{stoke:80}, {price:1240}])
         res.status(200).json({
             code:res.statusCode,
             status:"Success",
