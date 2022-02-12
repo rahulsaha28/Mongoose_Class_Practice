@@ -1,11 +1,11 @@
 const { Products } = require('../Model/Product.Model');
 const router = require('express').Router();
 
-router.get('/elemMatch', async(req, res)=>{
+router.get('/equals', async(req, res)=>{
 
     try {
 
-        const products = await Products.where('qty').elemMatch({ color:"red", num:20 })
+        const products = await Products.where('price').equals(800);
         res.status(200).json({
             code:res.statusCode,
             status:"Success",

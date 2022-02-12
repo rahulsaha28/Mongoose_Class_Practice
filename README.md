@@ -53,15 +53,7 @@
 
 [Operator in mongodb](https://docs.mongodb.com/manual/reference/operator/aggregation/)
 
-[elemMatch](https://docs.mongodb.com/manual/reference/operator/query/elemMatch/)
+[equals](https://docs.atlas.mongodb.com/atlas-search/equals/)
 
 
-```javascript
 
-{ <field>: { $elemMatch: { <query1>, <query2>, ... } } }
-
-db.scores.find(
-   { results: { $elemMatch: { $gte: 80, $lt: 85 } } }
-)
-
-```
