@@ -1,11 +1,11 @@
 const { Products } = require('../Model/Product.Model');
 const router = require('express').Router();
 
-router.get('/not', async(req, res)=>{
+router.get('/count', async(req, res)=>{
 
     try {
 
-        const products = await Products.find({price:{$not:{$gt:800}}})
+        const products = await Products.find({price:{$not:{$gt:800}}}).count()
         res.status(200).json({
             code:res.statusCode,
             status:"Success",
