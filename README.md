@@ -53,4 +53,15 @@
 
 [Operator in mongodb](https://docs.mongodb.com/manual/reference/operator/aggregation/)
 
-[count](https://docs.mongodb.com/manual/reference/command/count/)
+[elemMatch](https://docs.mongodb.com/manual/reference/operator/query/elemMatch/)
+
+
+```javascript
+
+{ <field>: { $elemMatch: { <query1>, <query2>, ... } } }
+
+db.scores.find(
+   { results: { $elemMatch: { $gte: 80, $lt: 85 } } }
+)
+
+```
