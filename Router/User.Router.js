@@ -6,8 +6,7 @@ const router = require('express').Router();
 router.get('/or', async(req, res)=>{
     try {
 
-        const users = await Users.find({}).or([{name:"nakib"}, {email:"suzon-1@gmail.com"}])
-
+        const users = await Users.find()
         res.status(200).json({
             status:"Success",
             code:res.statusCode,

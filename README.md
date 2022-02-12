@@ -53,5 +53,13 @@
 
 [Operator in mongodb](https://docs.mongodb.com/manual/reference/operator/aggregation/)
 
-[nor](https://docs.mongodb.com/manual/reference/operator/query/nor/)
+[not](https://docs.mongodb.com/manual/reference/operator/query/not/)
 
+```javascript
+
+Syntax: { field: { $not: { <operator-expression> } } }
+
+db.inventory.find( { price: { $not: { $gt: 1.99 } } } )
+
+
+```
